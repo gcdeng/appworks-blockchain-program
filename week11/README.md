@@ -1,8 +1,10 @@
 # appworks-blockchain-program-week11
 
+## Assignment
+
 <https://github.com/AppWorks-School/Blockchain-Resource/blob/main/section3/lending.md>
 
-## 目的：理解區塊鏈的借貸協議怎麼做，以及閃電貸怎麼使用
+### 目的：理解區塊鏈的借貸協議怎麼做，以及閃電貸怎麼使用
 
 請賞析 [Compound](https://docs.compound.finance/v2/) 的合約，並依序實作以下
 
@@ -16,7 +18,7 @@
 2. 讓 user1 mint/redeem CErc20，請透過 Hardhat test case 實現以下場景
    - User1 使用 100 顆（100 \* 10^18） ERC20 去 mint 出 100 CErc20 token，再用 100 CErc20 token redeem 回 100 顆 ERC20
 
-## test
+## Test
 
 ```sh
 yarn

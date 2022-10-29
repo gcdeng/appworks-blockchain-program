@@ -32,7 +32,7 @@ contract TestCErc20 is CToken, CErc20Interface {
                         string memory symbol_,
                         uint8 decimals_) public {
         admin = payable(msg.sender);
-        console.log(admin);
+        // console.log(admin);
 
         // CToken initialize does the bulk of the work
         super.initialize(comptroller_, interestRateModel_, initialExchangeRateMantissa_, name_, symbol_, decimals_);

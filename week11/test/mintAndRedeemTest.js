@@ -29,7 +29,7 @@ describe("Test Compound CErc20", () => {
     );
     await testErc20.deployed();
 
-    // deploy interest rate model, 將利率模型合約中的借貸利率設定為 0%
+    // deploy WhitePaperInterestRateModel, 將利率模型合約中的借貸利率設定為 0%
     const whitePaperInterestRateModelFactory = await ethers.getContractFactory(
       "WhitePaperInterestRateModel"
     );
@@ -45,7 +45,7 @@ describe("Test Compound CErc20", () => {
     const testCErc20 = await testCErc20Factory.deploy();
     await testCErc20.deployed();
 
-    // initialize CErc20
+    // initialize CErc20, 因為有重複的initialize, 需要寫成function signature
     await testCErc20[
       "initialize(address,address,address,uint256,string,string,uint8)"
     ](

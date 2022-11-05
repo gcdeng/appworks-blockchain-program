@@ -77,7 +77,6 @@ describe("Test Compound CErc20", () => {
     expect(testCErc20BalanceOfOwner).to.equal(MINT_AMOUNT);
 
     // owner redeem 100 testErc20 token with testCErc20 token
-    await testCErc20.approve(owner.address, MINT_AMOUNT);
     await testCErc20.redeem(MINT_AMOUNT);
 
     // testCErc20合約的testErc20 token餘額應該為0

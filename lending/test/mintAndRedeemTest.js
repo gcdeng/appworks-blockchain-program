@@ -1,7 +1,7 @@
 const { ethers } = require("hardhat");
 const { expect } = require("chai");
 
-describe("Test Compound CErc20", () => {
+describe("Compound", () => {
   it("Should be able to mint/redeem with ERC20 token", async () => {
     const [owner] = await ethers.getSigners();
 

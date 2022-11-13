@@ -22,6 +22,8 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.7.3",
-    "compound-protocol": "https://github.com/compound-finance/compound-protocol.git"
+    "@uniswap/v3-periphery": "^1.4.3",
+    "compound-protocol": "https://github.com/compound-finance/compound-protocol.git",
+    "dotenv": "^16.0.3"
   }
 }

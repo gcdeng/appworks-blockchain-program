@@ -87,7 +87,7 @@ describe("liquidate borrow from COMPOUND by using AAVE flash loan", () => {
       usdcToken.address,
       comptroller.address,
       whitePaperInterestRateModel.address,
-      parseUnits("1", USDC_DECIMALS), // 初始 exchangeRate 為 1:1, 注意：USDC decimals = 6
+      parseUnits("1", USDC_DECIMALS), // 初始 exchangeRate 為 1:1, 注意：USDC decimals = 6, 1 * 10^(18 - 18 + 6), reference: https://docs.compound.finance/v2/ctokens/#exchange-rate
       "cUsdc",
       "cUsdc",
       18 // CToken 的 decimals 為 18
@@ -116,7 +116,7 @@ describe("liquidate borrow from COMPOUND by using AAVE flash loan", () => {
     // 在 Oracle 中設定 USDC 的價格為 $1，UNI 的價格為 $10
     await simplePriceOracle.setUnderlyingPrice(
       cUsdc.address,
-      parseUnits("1", 18 + 18 - 6) // 因為USDC decimals = 6, 這邊要補上 USDC 少的 18 - 6 個位數
+      parseUnits("1", 18 + 18 - 6) // 因為USDC decimals = 6, 這邊要補上 USDC 少的 18 - 6 個位數, reference: https://docs.compound.finance/v2/prices/#underlying-price
     );
 
     await simplePriceOracle.setUnderlyingPrice(

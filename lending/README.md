@@ -103,3 +103,5 @@ npx hardhat test ./test/flashLoan.js
 ### reference
 
 <https://docs.aave.com/developers/v/2.0/guides/flash-loans>
+<https://docs.compound.finance/v2/ctokens/#exchange-rate>
+<https://docs.compound.finance/v2/prices/#underlying-price>
